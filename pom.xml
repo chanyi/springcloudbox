@@ -11,6 +11,8 @@
     <module>mainServer</module>
     <module>eureka-server</module>
       <module>config-server</module>
+    <module>zipkin</module>
+    <module>zipkin</module>
   </modules>
   <packaging>pom</packaging>
   <name>springcloudbox</name>
