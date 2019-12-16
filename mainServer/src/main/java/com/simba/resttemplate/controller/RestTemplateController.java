@@ -28,16 +28,19 @@ public class RestTemplateController {
   @Test
   public void testRestTemplate(){
 //    String url = "http://127.0.0.1:8762/test/test";
-    String url = "http://EUREKA/test/test";
+    String url = "http://eurekaclient/test/test";
 //    RestTemplate restTemplate = new RestTemplate();
     ResponseEntity<String> list =  restTemplate.getForEntity(url, String.class);
     System.out.println(list);
     System.out.println(list.getBody());
   }
 
-  @Test
+  @ResponseBody
+  @RequestMapping("/testRestTemplate1")
   public void test(){
     String url = "http://127.0.0.1:8762/test/test";
-    System.out.println(url);
+    ResponseEntity<String> list =  restTemplate.getForEntity(url, String.class);
+    System.out.println(list);
+    System.out.println(list.getBody());
   }
 }
